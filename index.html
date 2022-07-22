@@ -1,12 +1,18 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
 <meta charset="utf-8" />
 <title>Hugo Lebeau</title>
 </head>
+
 <body>
+
 <h1>Hugo Lebeau</h1>
+
 <hr />
+
 <div class="container" style="overflow: hidden">
 <div class="image" style="float: left; margin-right: 10px"><img src="me.jpg" alt="Hugo Lebeau" width="150" height="200" /></div>
 <div class="text"><b>Ph.D. student, Université Grenoble Alpes</b><br />
@@ -21,7 +27,26 @@ France<br />
 <a href="https://scholar.google.com/citations?user=atRIpOIAAAAJ">Scholar</a> &ensp; <a href="https://github.com/HugoLebeau">GitHub</a>
 </div>
 </div>
-<p><b>Ph.D. start</b>: October 2021 &emsp; <b>Expected end</b>: October 2024
+
+<script>
+var countDownDate = new Date("October 1, 2024 00:00:00").getTime();
+var x = setInterval(function(){
+	var now = new Date().getTime();
+	var distance = countDownDate - now;
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	document.getElementById("countdown").innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds &#x1F975;";
+	if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("countdown").innerHTML = "EXPIRED &#x1F631;";
+	}
+}, 1000);
+</script>
+
+<p><b>Ph.D. start</b>: October 2021 &emsp; <b>Expected end</b>: October 2024 &emsp; <b>Remaining time</b>: <span id="countdown"></span></p>
+
 <h2>Research topics</h2>
 Random Matrix Theory &emsp; Large-Dimensional Statistics for AI &emsp; Digital Sobriety and Resource-Efficient Learning
 <ul>
@@ -29,10 +54,12 @@ Random Matrix Theory &emsp; Large-Dimensional Statistics for AI &emsp; Digital S
 <li><b>Random Tensors</b> &ensp; Analysis of spiked tensor models with random matrix theory tools.</li>
 </ul>
 </div>
+
 <h2>Publications</h2>
 <ul>
 <li>Hugo Lebeau, Romain Couillet, Florent Chatelain, <b>A Random Matrix Analysis of Data Stream Clustering: Coping With Limited Memory Resources</b>, ICML 2022 [<a href="https://proceedings.mlr.press/v162/lebeau22a.html">article</a>][<a href="https://github.com/HugoLebeau/online_learning">code</a>]</li>
 <li>Hugo Lebeau, Romain Couillet, Florent Chatelain, <b>Une analyse par matrices aléatoires du clustering en ligne : comprendre l’impact des limitations en mémoire</b>, GRETSI 2022 [<a href="GRETSI_22_final.pdf">article</a>]</li>
 </ul>
 </body>
+
 </html>
